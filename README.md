@@ -23,7 +23,7 @@
 
 ```bash
 git clone ...
-cd fracfs
+cd fafs
 cargo build --release
 # exemples d'utilisation à venir
 
