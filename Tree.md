@@ -60,3 +60,31 @@ windows = { version = "0.52", features = [
 [dev-dependencies]
 rand = "0.8"
 
+
+
+├── Cargo.toml
+├── src/
+│   ├── main.rs                  # Point d’entrée (binaire de démonstration)
+│   ├── lib.rs                   # Bibliothèque principale
+│   ├── fractal/
+│   │   ├── mod.rs               # Module fractal : traits et types communs
+│   │   ├── hilbert.rs           # Courbe de Hilbert (encodage/décodage)
+│   │   ├── sierpinski.rs        # Arbre de répertoires de Sierpinski
+│   │   └── block_alloc.rs       # Allocation fractale (listes auto-similaires)
+│   ├── vfs/
+│   │   ├── mod.rs               # VFS (Virtual File System) – interface générique
+│   │   ├── inode.rs             # Inode fractal (métadonnées)
+│   │   ├── directory.rs         # Répertoire fractal (nœud Sierpinski)
+│   │   └── file_ops.rs          # Opérations de lecture/écriture
+│   ├── backend/
+│   │   ├── mod.rs
+│   │   └── win/
+│   │       ├── mod.rs           # Backend Windows : adaptateur pour syscalls NT
+│   │       ├── disk.rs          # Gestion des périphériques (ouvrir, lire secteur)
+│   │       ├── file_handle.rs   # Gestion des handles Windows (CreateFile, ReadFile, etc.)
+│   │       └── ioctl.rs         # Contrôle d’entrées-sorties (volumes, partitions)
+│   └── config.rs                # Configuration (taille de bloc, profondeur fractale…)
+├── tests/
+│   ├── test_hilbert.rs
+│   └── test_sierpinski.rs
+└── .gitignore                   # déjà fourni
