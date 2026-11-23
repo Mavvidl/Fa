@@ -3,7 +3,7 @@
 [![Licence: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/Rust-1.65%2B-blueviolet)](https://www.rust-lang.org)
 
-**FracFS** est un système de fichiers expérimental, multiplateforme, écrit en Rust, dont l’organisation des données et des métadonnées repose sur des **algorithmes de géométrie fractale**.
+**FaFS** est un système de fichiers expérimental, multiplateforme, écrit en Rust, dont l’organisation des données et des métadonnées repose sur des **algorithmes de géométrie fractale**.
 
 ## Objectifs
 
